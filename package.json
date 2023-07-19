@@ -1,0 +1,31 @@
+{
+  "name": "mini-spotify",
+  "version": "1.0.0",
+  "description": "Simple Spotify Playlist Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:dev": "nodemon src/app.js",
+    "migrate": "node-pg-migrate",
+    "migrate:test": "node-pg-migrate -f config/database/test.json",
+    "test": "jest --setupFiles dotenv/config",
+    "test:watch": "jest --watchAll --coverage --setupFiles dotenv/config"
+  },
+  "author": "Yusuf Umar Al Hakim",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nanoid": "^4.0.2",
+    "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "node-pg-migrate": "^6.2.2",
+    "nodemon": "^3.0.1"
+  }
+}
