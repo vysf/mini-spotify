@@ -27,7 +27,7 @@ class PlaylistsHandlerHandler {
         message: error.message,
       };
 
-      res.status(400).send(response);
+      res.status(error.statusCode).send(response);
     }
   }
 
@@ -50,7 +50,7 @@ class PlaylistsHandlerHandler {
         message: error.message,
       };
 
-      res.status(400).send(response);
+      res.status(error.statusCode).send(response);
     }
   }
 }

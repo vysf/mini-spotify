@@ -22,11 +22,11 @@ class PlaylistsSongsHandler {
       res.status(200).send(response);
     } catch (error) {
       const response = {
-        status: 'fail',
+        status: 'fail1',
         message: error.message,
       };
 
-      res.status(400).send(response);
+      res.status(error.statusCode).send(response);
     }
   }
 
@@ -49,7 +49,7 @@ class PlaylistsSongsHandler {
         message: error.message,
       };
 
-      res.status(400).send(response);
+      res.status(error.statusCode).send(response);
     }
   }
 }
