@@ -16,3 +16,13 @@ you need to add `config\database\test.json`
   "database": <postgres testing database>
 }
 ```
+
+# How to run
+Run command these below command for production:
+```
+npm run start
+```
+or development:
+```
+npm run start:dev
+```
